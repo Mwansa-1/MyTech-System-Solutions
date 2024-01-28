@@ -1,0 +1,134 @@
+{% load static %}
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>MTS</title>
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kaushan+Script&amp;display=swap">
+    <link rel="stylesheet" href="{% static 'fonts/fontawesome-all.min.css'%}">
+    <link rel="stylesheet" href="{% static 'fonts/font-awesome.min.css'%}">
+    <link rel="stylesheet" href="{% static 'fonts/ionicons.min.css'%}">
+    <link rel="stylesheet" href="{% static 'fonts/fontawesome5-overrides.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/bs-theme-overrides.css'%}">
+    <link rel="stylesheet" href="{% static 'css/aos.min.css'%}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="{% static 'css/animated-services.css'%}">
+    <link rel="stylesheet" href="{% static 'css/Basic-fancyBox-Gallery.css'%}">
+    <link rel="stylesheet" href="{% static 'css/Bootstrap-4---Photo-Gallery.css'%}">
+    <link rel="stylesheet" href="{% static 'css/Contact-Details-icons.css'%}">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.6.5/css/buttons.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.21/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="{% static 'css/Live-Hours-of-Operation-styles.css'%}">
+    <link rel="stylesheet" href="{% static 'css/Live-Hours-of-Operation.css'%}">
+    <link rel="stylesheet" href="{% static 'css/Modern-Contact-Form.css'%}">
+    <link rel="stylesheet" href="{% static 'css/Testimonials-images.css'%}">
+</head>
+<body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="54">
+    <nav class="navbar navbar-expand-lg fixed-top bg-dark navbar-dark" id="mainNav" style="background: #222 !important;padding-bottom: 0px;padding-top: 0px;">
+        <div class="container">
+            <a class="navbar-brand" href="#page-top"><img class="rounded border rounded-circle" src="{% static 'img/Screenshot%202023-12-20%20133526.png'%}" width="0" height="70"></a><button data-bs-toggle="collapse" data-bs-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right"
+                type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" style="border-radius: 0px;background: var(--bs-primary);"><i class="fa fa-bars"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto text-uppercase">
+                    <li class="nav-item"><a class="nav-link" href="{% url 'index'%}">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'services'%} ">Services</a></li>
+                    
+                    <li class="nav-item"><a class="nav-link" href="{% url 'team' %} ">TEAM ON SITE</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'index'%}">ONLINE STORE</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+{% block body%} {% endblock %}
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4"><span class="copyright">Copyright&nbsp;© MyTech Systems Solutions 2023</span></div>
+            <div class="col-md-4">
+                <ul class="list-inline quicklinks" style="color: var(--bs-primary);">
+                    <li class="list-inline-item"><a href="#about" style="color: var(--bs-primary);">About</a></li>
+                    <li class="list-inline-item"><a href="#services" style="color: var(--bs-primary);">Services</a></li>
+                    <li class="list-inline-item"><a href="#team" style="color: var(--bs-primary);">Team</a></li>
+                    <li class="list-inline-item"><a href="#" style="color: var(--bs-primary);">Products</a></li>
+                    <li class="list-inline-item"><a href="#contacts" style="color: var(--bs-primary);">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <ul class="list-inline social-buttons">
+                    <li class="list-inline-item"></li>
+                    <li class="list-inline-item"><a href="https://www.facebook.com/profile.php?id=100071338222661"><i class="fa fa-facebook"></i></a></li>
+                    <li class="list-inline-item"><a href="https://www.linkedin.com/company/mytech-systems-solutions-ltd/"><i class="fa fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="d-flex flex-row flex-grow-1 flex-shrink-1 flex-fill justify-content-center flex-sm-row flex-md-row flex-lg-row flex-xl-row flex-xxl-row visible" style="position: sticky;overflow: auto;bottom: 0;gap: 2rem;border-top: 0.5px solid var(--bs-border-color-translucent);width: 100%;background: var(--bs-white);padding: 10px;margin-top: 30px;" data-bs-theme="light">
+    <div class="justify-content-center align-items-center align-content-center"><a class="d-flex flex-column justify-content-center align-items-center" href="{% url 'online_store' %}">
+            <div class="justify-content-center align-items-center align-content-center"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20" fill="none" style="font-size: 32px;color: var(--bs-body-color);">
+                    <path d="M10.7071 2.29289C10.3166 1.90237 9.68342 1.90237 9.29289 2.29289L2.29289 9.29289C1.90237 9.68342 1.90237 10.3166 2.29289 10.7071C2.68342 11.0976 3.31658 11.0976 3.70711 10.7071L4 10.4142V17C4 17.5523 4.44772 18 5 18H7C7.55228 18 8 17.5523 8 17V15C8 14.4477 8.44772 14 9 14H11C11.5523 14 12 14.4477 12 15V17C12 17.5523 12.4477 18 13 18H15C15.5523 18 16 17.5523 16 17V10.4142L16.2929 10.7071C16.6834 11.0976 17.3166 11.0976 17.7071 10.7071C18.0976 10.3166 18.0976 9.68342 17.7071 9.29289L10.7071 2.29289Z" fill="currentColor"></path>
+                </svg></div>
+            <div>
+                <p style="color: var(--bs-body-color);">Home</p>
+            </div>
+        </a></div>
+    <div class="justify-content-center align-items-center align-content-center"><a class="d-flex flex-column align-items-center" href="{% url 'category' %}">
+            <div class="justify-content-center align-items-center align-content-center"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20" fill="none" style="font-size: 32px;color: var(--bs-body-color);">
+
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3 4C3 3.44772 3.44772 3 4 3H16C16.5523 3 17 3.44772 17 4C17 4.55228 16.5523 5 16 5H4C3.44772 5 3 4.55228 3 4ZM3 8C3 7.44772 3.44772 7 4 7H16C16.5523 7 17 7.44772 17 8C17 8.55228 16.5523 9 16 9H4C3.44772 9 3 8.55228 3 8ZM3 12C3 11.4477 3.44772 11 4 11H16C16.5523 11 17 11.4477 17 12C17 12.5523 16.5523 13 16 13H4C3.44772 13 3 12.5523 3 12ZM3 16C3 15.4477 3.44772 15 4 15H16C16.5523 15 17 15.4477 17 16C17 16.5523 16.5523 17 16 17H4C3.44772 17 3 16.5523 3 16Z" fill="currentColor"></path>
+                </svg></div>
+            <div>
+                <p style="color: var(--bs-body-color);">Categories</p>
+            </div>
+        </a></div>
+    <div class="justify-content-center align-items-center align-content-center"><a class="d-flex flex-column align-items-center" href="{% url 'view_cart' %}">
+            <div class="justify-content-center align-items-center align-content-center"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20" fill="none" style="font-size: 32px;color: var(--bs-body-color);">
+                    <path d="M3 1C2.44772 1 2 1.44772 2 2C2 2.55228 2.44772 3 3 3H4.21922L4.52478 4.22224C4.52799 4.23637 4.5315 4.25039 4.5353 4.26429L5.89253 9.69321L4.99995 10.5858C3.74002 11.8457 4.63235 14 6.41416 14H15C15.5522 14 16 13.5523 16 13C16 12.4477 15.5522 12 15 12L6.41417 12L7.41416 11H14C14.3788 11 14.725 10.786 14.8944 10.4472L17.8944 4.44721C18.0494 4.13723 18.0329 3.76909 17.8507 3.47427C17.6684 3.17945 17.3466 3 17 3H6.28078L5.97014 1.75746C5.85885 1.3123 5.45887 1 5 1H3Z" fill="currentColor"></path>
+                    <path d="M16 16.5C16 17.3284 15.3284 18 14.5 18C13.6716 18 13 17.3284 13 16.5C13 15.6716 13.6716 15 14.5 15C15.3284 15 16 15.6716 16 16.5Z" fill="currentColor"></path>
+                    <path d="M6.5 18C7.32843 18 8 17.3284 8 16.5C8 15.6716 7.32843 15 6.5 15C5.67157 15 5 15.6716 5 16.5C5 17.3284 5.67157 18 6.5 18Z" fill="currentColor"></path>
+                </svg></div>
+            <div>
+                <p style="color: var(--bs-body-color);">Cart</p>
+            </div>
+        </a></div>
+    <div class="justify-content-center align-items-center align-content-center"><a class="d-flex flex-column align-items-center" href="{% url 'profile' %}">
+            <div class="justify-content-center align-items-center align-content-center">
+            {% if user.profile.image %}
+                <img class="rounded-circle" width="32" height="32" src="{{user.profile.image.url}}">
+            {% else %}
+                <!-- Provide a link to your dummy/default profile image -->
+                <img class="rounded-circle" width="32" height="32" src="{% static 'img/rj45.jpg' %}">
+            {% endif %}
+        </div>
+            <div>
+                <p style="color: var(--bs-body-color);">Profile</p>
+            </div>
+        </a></div>
+</div>
+<script src="{% static 'js/jquery.min.js'%}"></script>
+<script src="{% static 'bootstrap/js/bootstrap.min.js'%}"></script>
+<script src="{% static 'js/aos.min.js'%}"></script>
+<script src="{% static 'js/bs-init.js'%}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.6.0/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.21/js/jquery.dataTables.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.6.5/js/dataTables.buttons.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.flash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.html5.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.print.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+<script src="{% static 'js/agency.js'%}"></script>
+<script src="{% static 'js/Basic-fancyBox-Gallery-myfancybox.js'%}"></script>
+<script src="{% static 'js/DataTable---Fully-BSS-Editable-style.js'%}"></script>
+<script src="{% static 'js/Live-Hours-of-Operation-jquery1.js'%}"></script>
+</body>
+</html>

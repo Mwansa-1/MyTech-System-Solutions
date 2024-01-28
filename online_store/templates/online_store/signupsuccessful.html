@@ -1,0 +1,23 @@
+{% extends 'online_store/layout.html' %}
+{% load static %}
+
+{% block body %}
+
+    <div class= "container" style="margin-top:10rem;">
+        <div class="row" >
+           <h1>
+                <center>
+                     <b>Welcome</b>
+                     <br>
+                     <a href="{% url 'online_store' %}">
+                        <button class="btn btn-primary submit-now" style="background: #e89e01;border-radius: 0px;" >Continue</button>
+                     </a>
+                </center>
+           </h1>
+        </div>
+        
+    </div>
+    <br>
+    <hr>
+    
+{% endblock %}

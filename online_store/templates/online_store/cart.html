@@ -1,0 +1,83 @@
+{% extends "online_store/layout.html" %}
+{% load static %}
+
+{% block body %}
+
+
+<div class="container" style="margin-top:10rem;">
+    <div class="table-responsive">
+        
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Shipping</th>
+                    {% comment %} <th>Total</th> {% endcomment %}
+                    
+                    
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in cart_items %}
+                <tr>
+                    <td>
+                        <div class="d-flex flex-column flex-grow-1 flex-shrink-1 align-items-start" style="margin-left: -1px;">
+                            <div><img src="{{item.product.image.url}}" width="51" height="36"></div>
+                            <div>
+                                <p style="margin-left: 5px;"><strong> {{item.product.name}} </strong></p>
+                            </div>
+                        </div>
+                        <div>
+                            <a href="{% url 'remove_from_cart' item.id %}"><button class="btn btn-outline-danger btn-sm" type="submit">Remove</button></a>
+                        </div>
+                    </td>
+                    <td><strong>K {{item.product.price}} </strong></td>
+                    <td>
+                        <div class="d-flex">
+                            <div style="padding: 0.3rem;"></div>
+                            <div style="padding: 0.3rem;">
+                                <p> {{item.quantity}} </p>
+                            </div>
+                            <div style="padding: 0.3rem;"></div>
+                        </div>
+                    </td>
+                    <td><strong>K {{item.product.shipping}} </strong></td>
+                    {% comment %} <td><strong>K {{total}} </strong></td> {% endcomment %}
+                    
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        
+      
+    </div>
+    <div style="margin-top: 30px;">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Subtotal</strong></td>
+                        <td>K {{subtotal}} </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Shipping</strong></td>
+                        <td>K {{shipping}} &nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Grand total</strong></td>
+                        <td>K {{grand_total}} &nbsp;</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <a href="{% url 'checkout' %}" >
+    <button class="btn btn-primary w-100" type="button" style="background: var(--bs-btn-border-color);border-color: var(--bs-btn-border-color);border-radius: 0px;">Check Out</button>
+    </a>
+</div>
+{% endblock %}

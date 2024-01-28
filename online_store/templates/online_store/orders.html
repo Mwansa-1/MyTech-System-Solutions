@@ -1,0 +1,16 @@
+{% extends "online_store/layout.html" %}
+{% load static %}
+
+{% block body %}
+
+<div style="margin-top:10rem">
+    {% for order in orders %}
+        <p> {{order.product.name}} </p>
+        <p> {{order.order_date}} </p>
+        <p> {{order.viewed}} </p>
+        <p> {{order.received}} </p>
+
+    {% endfor %}
+</div>
+
+{% endblock %}

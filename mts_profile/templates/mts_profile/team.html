@@ -1,0 +1,14 @@
+{% extends "mts_profile/layout.html" %}
+{% load static %}
+
+{% block body %}
+    <div class="container" style="margin-top: 113px;">
+        <h1 style="text-align: center;margin-bottom: 30px; font-size:x-large;">OUR TEAM ON SITE</h1>
+        <div class="row flex-box flex-wrap-wrap">
+            {% for img in teamOnSite %}
+            <div class="col-sm-4 flex-box flex-justify-center flex-align-center"><a class="fancybox" ><img class="img-fluid" src="{{img.image.url}}"></a></div>
+            {% endfor %}
+        </div>
+    </div>
+    <hr>
+    {% endblock %}

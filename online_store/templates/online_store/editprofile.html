@@ -1,0 +1,28 @@
+{% extends "online_store/layout.html" %}
+{% load static %}
+
+{% block body %}
+
+<div class="container" >
+    <div class="row" >
+        <div class="col-md-6" style="margin:auto;margin-top: 113px;">
+            <h1 style="font-size: x-large;">Edit Profile</h1>
+            <p>Change your Address and Phone Number</p>
+            <form  action="{% url 'editprofile' %}" method="post">
+                {% csrf_token %}
+                {% load widget_tweaks %}
+                {{ form.phone|add_class:"form-control input modern-form__form-control--textarea"|attr:"placeholder:Phone Number"|attr:"type:number" }}
+                {{ form.address|add_class:"form-control input modern-form__form-control--textarea"|attr:"placeholder:Address"|attr:"type:text" }}
+                <center>
+                <input class="btn btn-primary submit-now" type="submit" style="background: #e89e01;border-radius: 0px;" value="Save">
+            
+                </center>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+<hr>
+
+{% endblock %}

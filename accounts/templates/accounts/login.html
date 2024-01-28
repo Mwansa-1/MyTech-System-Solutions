@@ -1,0 +1,33 @@
+{% extends 'online_store/layout.html' %}
+{% load static %}
+
+{% block body %}
+
+    <div class= "container" style="margin-top:10rem;">
+        <div class="row" >
+            <div class = "col-md-6" style="margin:auto ;" >
+                <h1>Login</h1>
+    <form method="post" "{% url 'accounts:login' %}" >
+        {% csrf_token %}
+        
+        {% load widget_tweaks %}
+        {{ form.username|add_class:"form-control input modern-form__form-control--textarea"|attr:"placeholder:Username"|attr:"type:Username" }}
+        {{ form.password|add_class:"form-control input modern-form__form-control--textarea"|attr:"placeholder:Password"|attr:"type:password" }} 
+        <center>
+        <input class="btn btn-primary submit-now" type="submit" style="background: #e89e01;border-radius: 0px;" value="Login">
+        </center>
+        <br>
+    </form>
+    <center>
+    <a style="color: #e89e01;" href="{% url 'accounts:signup' %}" >
+        Dont have an account? Singup here
+    </a>
+    </center>
+            </div>
+        </div>
+        
+    </div>
+    <br>
+    <hr>
+    
+{% endblock %}

@@ -177,4 +177,4 @@ def search(request):
     return render(request, 'online_store/search.html', {'form': form, 'results': results})
 
 def signupsuccessful(request):
-    return render(request , "online_store/signupsuccessful.html")
+    return render(request , "online_store/signupsuccessful.html",{'title': Profile.objects.all(),})

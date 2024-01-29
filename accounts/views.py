@@ -11,6 +11,7 @@ from django.contrib.auth.decorators import login_required
 from .forms import CustomUserCreationForm , CustomAuthenticationForm
 
 
+
 def signup_view(request):
     if request.method == 'POST':
         form = CustomUserCreationForm(request.POST)
@@ -45,5 +46,3 @@ def logout_view(request):
         logout(request)
         return redirect('online_store')
     
-def signupsuccessful(request):
-    return render(request , "accounts/singupsuccessful.html")

@@ -11,10 +11,17 @@
         {% csrf_token %}
         {% load widget_tweaks %}
         {{ form.username|add_class:"form-control input modern-form__form-control--textarea"|attr:"placeholder:Username"|attr:"type:text" }}
+        {% comment %} <p class="text-muted">Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.</p> {% endcomment %}
         {{ form.email|add_class:"form-control input modern-form__form-control--textarea"|attr:"placeholder:Email"|attr:"type:email" }}
         {{ form.password1|add_class:"form-control input modern-form__form-control--textarea"|attr:"placeholder:Password"|attr:"type:password" }}
+        {% comment %} <ul class="text-muted">
+            <li>Your password can't be too similar to your other personal information.</li>
+            <li>Your password must contain at least 8 characters.</li>
+            <li>Your password can't be a commonly used password.</li>
+            <li>Your password can't be entirely numeric.</li>
+        </ul> {% endcomment %}
         {{ form.password2|add_class:"form-control input modern-form__form-control--textarea"|attr:"placeholder:Password Confirmation"|attr:"type:password" }}
-
+        {% comment %} <p class="text-muted">Enter the same password as before, for verification.</p> {% endcomment %}
         <center>
         <input class="btn btn-primary submit-now" type="submit" style="background: #e89e01;border-radius: 0px;" value="Sign Up">
         </center>
